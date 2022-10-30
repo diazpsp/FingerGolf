@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ca4651d44b14c48ab8d7210a5c875f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 100118429}
+  rb: {fileID: 0}
 --- !u!1001 &142599375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048724329030478937, guid: 46a51875d7fcfbe40b1bf41ead723dca, type: 3}
       propertyPath: m_Drag
-      value: 0
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2048724329030478937, guid: 46a51875d7fcfbe40b1bf41ead723dca, type: 3}
       propertyPath: m_Mass
@@ -373,7 +373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2048724329030478937, guid: 46a51875d7fcfbe40b1bf41ead723dca, type: 3}
       propertyPath: m_AngularDrag
-      value: 0
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048724329030478937, guid: 46a51875d7fcfbe40b1bf41ead723dca, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2048724329030478938, guid: 46a51875d7fcfbe40b1bf41ead723dca, type: 3}
       propertyPath: m_RootOrder
@@ -3177,7 +3181,7 @@ MonoBehaviour:
   Raylayer:
     serializedVersion: 2
     m_Bits: 128
-  camSensitivity: {x: 20, y: 20}
+  camSensitivity: {x: 50, y: 50}
   shootForce: 100
 --- !u!4 &917167219
 Transform:
@@ -3187,7 +3191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917167217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 3}
+  m_LocalPosition: {x: 0, y: -4.16, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1089768426}
@@ -3302,7 +3306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089768425}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.65, y: -6.19, z: -2.13}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 917167219}

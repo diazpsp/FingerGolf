@@ -27,4 +27,11 @@ public class Ball : MonoBehaviour
     internal void AddForce(Vector3 force){
         rb.AddForce(force,ForceMode.Impulse);
     }
+
+    private void FixedUpdate(){
+        if(rb.velocity != Vector3.zero && rb.velocity.magnitude < 0.5f)
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
 }

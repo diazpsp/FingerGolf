@@ -30,8 +30,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
-
+        if(ball.IsMoving){
+            return;
+        }
+        // if(this.transform.position != ball.Position){
+        //     this.transform.position = ball.Position;
+        // }
         if(Input.GetMouseButtonDown(0))
         {
            
@@ -52,6 +56,7 @@ public class PlayerController : MonoBehaviour
                 
 
                 var forceVector = ball.Position - hit.point;
+                forceVector = new Vector3(forceVector.x,0,forceVector.z);
                 forceDir = forceVector.normalized;
                 var forceMagnitude = forceVector.magnitude;
                 Debug.Log(forceMagnitude);
