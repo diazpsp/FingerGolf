@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] Vector2 camSensitivity;
     [SerializeField] float shootForce;
+    [SerializeField] AudioSource audio;
 
     Vector3 lastMousePosition;
 
@@ -25,14 +26,22 @@ public class PlayerController : MonoBehaviour
 
     void Start(){
         ballDistance = Vector3.Distance(cam.transform.position, ball.Position);
+        audio = GetComponent<AudioSource>();
+        isShooting = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ball.IsMoving){
-            return;
+        if(ball.IsMoving == false){
+           audio.Play();
+         
         }
+        if(ball.IsMoving){
+           return;
+         
+        }
+         
         // if(this.transform.position != ball.Position){
         //     this.transform.position = ball.Position;
         // }
@@ -99,6 +108,7 @@ public class PlayerController : MonoBehaviour
             forceFactor = 0;
             forceDir = Vector3.zero;
             isShooting = false;
+           
         }
         lastMousePosition = Input.mousePosition;
     }

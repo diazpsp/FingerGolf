@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour
     [SerializeField] Rigidbody rb;
     public Vector3 Position => rb.position;
 
-        public bool IsMoving => rb.velocity!=Vector3.zero;
+    public bool IsMoving => rb.velocity!=Vector3.zero;
 
 
 
